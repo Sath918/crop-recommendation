@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌱Crop Recommendation🌱</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-green-100 to-green-300 min-h-screen flex items-center justify-center font-sans">
+
+  <div class="bg-white shadow-xl rounded-2xl p-10 w-full max-w-lg text-center">
+    <h1 class="text-3xl font-bold text-green-700 mb-6">🌱 Crop Recommendation System🌱</h1>
+    <p class="text-gray-600 mb-6">Enter soil & weather details below to get the best 🌾crop suggestion.</p>
+
+    <form action="/predict" method="POST" class="space-y-4">
+      <div class="grid grid-cols-2 gap-4 text-left">
+        <div>
+          <label class="block text-gray-700">Nitrogen (N)</label>
+            <label>
+                <input type="number" name="N" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+        <div>
+          <label class="block text-gray-700">Phosphorus (P)</label>
+            <label>
+                <input type="number" name="P" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+        <div>
+          <label class="block text-gray-700">Potassium (K)</label>
+            <label>
+                <input type="number" name="K" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+        <div>
+          <label class="block text-gray-700">Temperature (°C)</label>
+            <label>
+                <input type="number" step="0.1" name="temperature" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+        <div>
+          <label class="block text-gray-700">Humidity (%)</label>
+            <label>
+                <input type="number" step="0.1" name="humidity" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+        <div>
+          <label class="block text-gray-700">pH</label>
+            <label>
+                <input type="number" step="0.1" name="ph" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+        <div class="col-span-2">
+          <label class="block text-gray-700">Rainfall (mm)</label>
+            <label>
+                <input type="number" step="0.1" name="rainfall" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </label>
+        </div>
+      </div>
+
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounde-lg hover:bg-green-700 transition duration-300">🌾 Predict Crop</button>
+
+        <h3 class="text-2xl font-bold text-grey-300 mb-4">Developed By Sathiya🖥️</h3>
+    </form>
+  </div>
+
+</body>
+</html>
